@@ -1,0 +1,23 @@
+{
+  "Version": 1,
+  "Hash": "QG+brI4zmqeMJ7p5TmHPGFy4yRDBSXr8fFv7GKRK3tc=",
+  "Source": "Proyecto.Server",
+  "BasePath": "_content/Proyecto.Server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\Users\\juan\\Documents\\GitHub\\ProyectoTercerSemestre\\Proyecto\\proyecto.client\\proyecto.client.esproj",
+      "Version": 2,
+      "Source": "proyecto.client",
+      "GetPublishAssetsTargets": "GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained"
+    }
+  ],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

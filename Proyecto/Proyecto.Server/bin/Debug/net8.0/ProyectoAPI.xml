@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Proyecto.Server</name>
+    </assembly>
+    <members>
+        <member name="T:Proyecto.Server.BLL.Service.UserBLL">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Proyecto.Server.Controllers.AuthControllers">
+            <summary>
+            Controlador responsable de la autenticación de usuarios.
+            </summary>
+        </member>
+        <member name="M:Proyecto.Server.Controllers.AuthControllers.#ctor(Proyecto.Server.BLL.Interface.InterfacesService.IUserBLL)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="usuarioBLL"></param>
+        </member>
+        <member name="M:Proyecto.Server.Controllers.AuthControllers.AuthUser(Proyecto.Server.DTOs.UserRegistrationDTO.AuthRequestDTO)">
+            <summary>
+            Este método autentica a un usuario mediante su solicitud de autenticación.
+            </summary>
+            <param name="parametrosPeticion">Parámetros necesarios para autenticar al usuario (incluye el correo electrónico y la contraseña).</param>
+            <returns>Un token JWT que puede ser utilizado para autenticar futuras solicitudes.</returns>
+            <response code="200">Devuelve el token JWT si la autenticación es exitosa.</response>
+            <response code="400">Si los parámetros de autenticación son incorrectos o si ocurre un error interno.</response>
+            <response code="401">Si el usuario no está autorizado.</response>
+            <response code="404">Si el usuario no se encuentra.</response>
+        </member>
+        <member name="M:Proyecto.Server.Controllers.AuthControllers.CreateNewUser(Proyecto.Server.DTOs.UserRegistrationDTO.UserRegistrationParameter)">
+            <summary>
+            Crea un nuevo usuario en el sistema. Solo los usuarios con el rol "Admin" pueden ejecutar este método.
+            </summary>
+            <param name="parametrosPeticion">El parámetro que contiene los datos necesarios para crear el nuevo usuario.</param>
+            <returns>Un IActionResult que indica si la operación fue exitosa, o el motivo de un error.</returns>
+            <response code="201">Usuario creado exitosamente.</response>
+            <response code="401">Si el ID del usuario no se puede obtener desde el token.</response>
+            <response code="409">Si el correo electrónico del usuario ya está registrado.</response>
+            <response code="400">Si ocurre un error inesperado al procesar la solicitud.</response>
+        </member>
+        <member name="T:Proyecto.Server.Controllers.TournamentControllers">
+            <summary>
+            Controlador responsable de manejo de los torneos y subtorneos
+            </summary>
+        </member>
+        <member name="M:Proyecto.Server.Controllers.TournamentControllers.#ctor(Proyecto.Server.BLL.Interface.InterfacesService.ITournamentBLL,Proyecto.Server.Utils.AzureBlobService)">
+            <summary>
+            Contructor
+            </summary>
+        </member>
+        <member name="M:Proyecto.Server.Controllers.TournamentControllers.GetTypeTournaments">
+            <summary>
+            Obtiene los tipos de torneos
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Proyecto.Server.Controllers.TournamentControllers.CreateNewTournament(Proyecto.Server.DTOs.TournamentDTO.CreateTournamenteParameter)">
+            <summary>
+            Crea un nuevo torneo incluyendo las ramas que desea habilitar el administrador. Necesita Autenticación 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Proyecto.Server.DAL.AppDbContext">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Proyecto.Server.DAL.AppDbContext.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Proyecto.Server.DAL.AppDbContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{Proyecto.Server.DAL.AppDbContext})">
+            <summary>
+            
+            </summary>
+            <param name="options"></param>
+        </member>
+    </members>
+</doc>
